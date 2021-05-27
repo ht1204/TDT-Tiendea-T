@@ -13,6 +13,9 @@ import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
 import DialogContentText from '@material-ui/core/DialogContentText'
 import DialogTitle from '@material-ui/core/DialogTitle'
+import Image from 'material-ui-image'
+import CardMedia from "@material-ui/core/CardMedia";
+import Container from "@material-ui/core/Container";
 
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -41,7 +44,17 @@ const stylesSignup = makeStyles(theme => ({
   submit: {
     margin: 'auto',
     marginBottom: theme.spacing(2)
-  }
+  },
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  media: {
+    height: 100,
+    width: 100
+  },
 }))
 
 function Signup() {
@@ -75,6 +88,13 @@ function Signup() {
     return (<div>
       <Card className={classes.card}>
         <CardContent>
+          <Container className={classes.container}>
+            <CardMedia
+                className={classes.media}
+                image="https://res.cloudinary.com/htmediacloud/image/upload/c_scale,w_74/v1622135325/TDT-Logo_-_2_dbknjz.png"
+                title=""
+              />
+          </Container>
           <Typography variant="h6" className={classes.title}>
             Vamos, Tiendea-T, Crea una cuenta
           </Typography>

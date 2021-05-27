@@ -22,7 +22,7 @@ const userByID = async (req, res, next, id) => {
     let user = await User.findById(id)
     if (!user)
       return res.status('400').json({
-        error: "User not found"
+        error: "Usuario no encontrado"
       })
     req.profile = user
     next()

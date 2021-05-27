@@ -112,7 +112,7 @@ function NewProduct({ match }) {
               />
               <label htmlFor="icon-button-file">
                 <Button variant="contained" color="secondary" component="span">
-                  Cambiar Foto
+                  Subir Foto
                   <FileUpload/>
                 </Button>
               </label> 
@@ -120,7 +120,7 @@ function NewProduct({ match }) {
               <br/>
               <TextField 
                 id="name" 
-                label="Name" 
+                label="Nombre" 
                 className={classes.textField}
                 value={values.name} 
                 onChange={handleChange('name')} 
@@ -139,7 +139,7 @@ function NewProduct({ match }) {
               /><br/>
               <TextField 
                 id="category"
-                label="Category" 
+                label="Categoría" 
                 className={classes.textField} 
                 value={values.category} 
                 onChange={handleChange('category')}
@@ -148,7 +148,7 @@ function NewProduct({ match }) {
               <br/>
               <TextField 
                 id="quantity" 
-                label="Quantity" 
+                label="Cantidad" 
                 className={classes.textField} 
                 value={values.quantity} 
                 onChange={handleChange('quantity')}
@@ -158,7 +158,7 @@ function NewProduct({ match }) {
               <br/>
               <TextField 
                 id="price" 
-                label="Price" 
+                label="Precio ($ COP)" 
                 className={classes.textField} 
                 value={values.price} 
                 onChange={handleChange('price')} 

@@ -7,6 +7,7 @@ import {
 import Home from '../../components/essentials/Home'
 import Menu from '../../components/essentials/Menu'
 
+
 import Signup from '../../components/auth/Signup'
 import Signin from '../../components/auth/Signin'
 import PrivateRoute from '../../components/auth/PrivateRoute'
@@ -33,33 +34,37 @@ import Order from '../../components/order/Order'
 
 function MainBrowserRouter(){
   return (
+  <>
     <div>
-      <Menu/>
-      <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route path="/users" component={Users}/>
-        <Route path="/signup" component={Signup}/>
-        <Route path="/signin" component={Signin}/>
-        <PrivateRoute path="/user/edit/:userId" component={EditProfile}/>
-        <Route path="/user/:userId" component={Profile}/>
+      
+        <Menu/>
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route path="/users" component={Users}/>
+          <Route path="/signup" component={Signup}/>
+          <Route path="/signin" component={Signin}/>
+          <PrivateRoute path="/user/edit/:userId" component={EditProfile}/>
+          <Route path="/user/:userId" component={Profile}/>
 
-        <Route path="/cart" component={Cart}/>
-        
-        <Route path="/shops/all" component={Shops}/>
-        <Route path="/shops/:shopId" component={Shop}/>
-        <Route path="/product/:productId" component={Product}/>
+          <Route path="/cart" component={Cart}/>
+          
+          <Route path="/shops/all" component={Shops}/>
+          <Route path="/shops/:shopId" component={Shop}/>
+          <Route path="/product/:productId" component={Product}/>
 
-        <Route path="/order/:orderId" component={Order}/>
-        <PrivateRoute path="/seller/orders/:shop/:shopId" component={ShopOrders}/>
+          <Route path="/order/:orderId" component={Order}/>
+          <PrivateRoute path="/seller/orders/:shop/:shopId" component={ShopOrders}/>
 
-        <PrivateRoute path="/seller/shops" component={MyShops}/>
-        <PrivateRoute path="/seller/shop/new" component={NewShop}/>
-        <PrivateRoute path="/seller/shop/edit/:shopId" component={EditShop}/>
-        <PrivateRoute path="/seller/:shopId/products/new" component={NewProduct}/>
-        <PrivateRoute path="/seller/:shopId/:productId/edit" component={EditProduct}/>
+          <PrivateRoute path="/seller/shops" component={MyShops}/>
+          <PrivateRoute path="/seller/shop/new" component={NewShop}/>
+          <PrivateRoute path="/seller/shop/edit/:shopId" component={EditShop}/>
+          <PrivateRoute path="/seller/:shopId/products/new" component={NewProduct}/>
+          <PrivateRoute path="/seller/:shopId/:productId/edit" component={EditProduct}/>
 
-      </Switch>
-    </div>
+        </Switch>
+
+      </div>
+      </>
   )
 }
 

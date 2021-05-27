@@ -206,7 +206,7 @@ export default function EditProduct ({ match }) {
               <br/>
               <TextField 
                 id="price" 
-                label="Precio" 
+                label="Precio ($ COP)" 
                 className={classes.textField} 
                 value={values.price} 
                 onChange={handleChange('price')} 

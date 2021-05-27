@@ -73,14 +73,13 @@ export default function NewShop() {
   }
 
   const handleChangePhone = name => event =>{
-    const regexp = /^[0-9\b]+$/
-    const value = name === 'phone' ? event.target.value : ''
-
-    if (!Number(value)) return
-   
-    if (event.target.value !== '' || regexp.test(event.target.value)) {
+      const regexp = /^[0-9\b]+$/
+      const {value} = event.target
+      if (!Number(value)) return
+    
+      if (regexp.test(event.target.value)) {
           setValues({...values, [name]: value })
-    }
+      }
   }
 
   const handleSubmit = () => {
@@ -143,7 +142,7 @@ export default function NewShop() {
             id="phone" 
             label="Teléfono de Contacto" 
             className={classes.textField} 
-            value={values.name}
+            value={values.phone}
             onChange={handleChangePhone('phone')}
             margin="normal"
           />
@@ -157,8 +156,8 @@ export default function NewShop() {
           }
         </CardContent>
         <CardActions>
-          <Button color="primary" variant="contained" onClick={handleSubmit} className={classes.submit}>Submit</Button>
-          <Link to='/seller/shops' className={classes.submit}><Button variant="contained">Cancel</Button></Link>
+          <Button color="primary" variant="contained" onClick={handleSubmit} className={classes.submit}>Agregar</Button>
+          <Link to='/seller/shops' className={classes.submit}><Button variant="contained">Cancelar</Button></Link>
         </CardActions>
       </Card>
     </div>)

@@ -11,7 +11,7 @@ const signin = async (req, res) => {
 
       if (!user)
         return res.status('401').json({
-          error: "User not found"
+          error: "Usuario no encontrado"
         })
 
       if (!user.authenticate(req.body.password)) {

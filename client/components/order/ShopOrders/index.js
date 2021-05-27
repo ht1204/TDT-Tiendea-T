@@ -153,6 +153,7 @@ export default function ShopOrders({ match }) {
                   <Typography type="subheading" component="h3" color="primary">
                     <strong>{order.customer_name}</strong> ({order.customer_email})
                   </Typography>
+                  {console.log('Número cliente: '+order.customer_phone)}
                   {order.customer_phone && (
                       <> 
                         <Typography type="subheading" component="h3" color="primary">

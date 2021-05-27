@@ -1,33 +1,31 @@
 import React from 'react'
 
 import AppBar from '@material-ui/core/AppBar'
-import Container from '@material-ui/core/Container'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import { makeStyles } from '@material-ui/core/styles'
 
-const useStyles = makeStyles({
-  root: {
-    width: "100%",
-  }
-});
+
+import styled from 'styled-components'
+
+
+const Container = styled.div`
+  margin-top:calc(5% + 60px);
+  bottom: 0;
+`;
 
 
 function Footer() {
 
-    const classes = useStyles()
     return (
-        <div className={classes.root}>
+        <Container>
             <AppBar position="static" color="primary">
-            <Container>
                 <Toolbar>
-                <Typography gutterBottom align="center" style={{width: "100%", alignItems: "center"}}>
-                    © 2021 Tiendea-T
-                </Typography>
+                    <Typography gutterBottom align="center" style={{width: "100%", alignItems: "center"}}>
+                        © 2021 Tiendea-T
+                    </Typography>
                 </Toolbar>
-            </Container>
             </AppBar>
-        </div>
+        </Container>
     )
 }
 
